@@ -12,7 +12,7 @@ public class RootControllerTest {
         //act
         String actualViewName = controller.getRootPage();
         //assert
-        String expected = "pages/index";
+        String expected = "pages/indexZ";
         assertEquals(expected, actualViewName);
     }
 }
