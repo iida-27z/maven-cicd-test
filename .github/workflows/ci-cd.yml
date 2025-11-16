@@ -9,6 +9,12 @@ on:
     branches:
       - develop
       - main
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: 実行対象のブランチ名
+        required: true
+        default: main
 
 permissions:
   contents: read
