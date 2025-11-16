@@ -1,0 +1,58 @@
+{
+    "cSpell.words": [
+        "CEINTL",
+        "eamodio",
+        "gitmessage",
+        "iida",
+        "jacoco",
+        "juhahinkula",
+        "mhutchie",
+        "mvnw",
+        "projectlombok",
+        "springframework",
+        "temurin",
+        "thymeleaf",
+        "vscjava"
+    ],
+    "cSpell.ignorePaths": [
+        "mvnw",
+        "mvnw.cmd"
+    ],
+    "search.exclude": {
+        "**/target": true,
+        "mvnw": true,
+        "mvnw.cmd": true,
+        "eclipse-java-google-style.xml": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.git/logs/**": true,
+        "**/target": true,
+        "mvnw": true,
+        "mvnw.cmd": true,
+        "eclipse-java-google-style.xml": true
+    },
+    "java.test.config": [
+        {
+            "name": "Unit Tests",
+            "testKind": "junit",
+            "filters": {
+                "tags": ["!integration"]
+            }
+        },
+        {
+            "name": "Integration Tests",
+            "testKind": "junit",
+            "filters": {
+                "tags": ["integration"],
+                "name": [".*IT"]
+            }
+        },
+        {
+            "name": "All Tests",
+            "testKind": "junit"
+        }
+    ],
+    "java.test.defaultConfig": "All Tests"
+}

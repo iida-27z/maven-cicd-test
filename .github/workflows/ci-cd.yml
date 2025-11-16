@@ -1,0 +1,36 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  test-job:
+    name: Test Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test echo
+        run: |
+          echo "test run"
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Set Up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
+      - name: Run Tests
+        run: mvn -B verify
+      - name: Archive Test Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: target/site/jacoco
+          retention-days: 14

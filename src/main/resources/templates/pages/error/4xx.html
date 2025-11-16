@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リクエストエラー</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div th:replace="~{/fragments/header :: pageHeader}"></div>
+        </header>
+        <main>
+            <h1 th:text="${statusCode}">4xx</h1>
+            <p>リクエストに問題があります。内容をご確認ください。</p>
+            <p th:text="${errorMessage}"></p>
+            <hr>
+            <p><a href="/">トップページに戻る</a></p>
+        </main>
+        <footer>
+            <div th:replace="~{/fragments/footer :: pageFooter}"></div>
+        </footer>
+    </div>
+</body>
+
+</html>

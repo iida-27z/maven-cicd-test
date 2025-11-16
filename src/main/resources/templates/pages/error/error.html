@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予期せぬエラー</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div th:replace="~{/fragments/header :: pageHeader}"></div>
+        </header>
+        <main>
+            <h1>予期せぬエラーが発生しました。</h1>
+            <hr>
+            <p><a href="/">トップページに戻る</a></p>
+        </main>
+        <footer>
+            <div th:replace="~{/fragments/footer :: pageFooter}"></div>
+        </footer>
+</body>
+
+</html>

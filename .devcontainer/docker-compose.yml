@@ -1,0 +1,12 @@
+services:
+  java21:
+    build:
+      context: .
+      dockerfile: ./docker/java/Dockerfile
+    container_name: java21
+    tty: true
+    ports:
+      - 8080:8080
+    volumes:
+      - ./../:/workspace/app
+      

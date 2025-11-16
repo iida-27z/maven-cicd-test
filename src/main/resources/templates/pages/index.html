@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム画面</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div th:replace="~{/fragments/header :: pageHeader}"></div>
+            <nav th:replace="~{/fragments/navigationBar :: navBar}"></nav>
+        </header>
+        <main>
+            <section class="common-container">
+                <h3 class="common-heading">お知らせ</h3>
+                <hr>
+                <ul>
+                    <li>
+                        <span>[xxxx/xx/xx]</span>
+                        <span><a href="/">開発環境テンプレートの更新について</a></span>
+                        <span class="color-red italic">NEW!</span>
+                    </li>
+                    <li><span>[xxxx/xx/xx]</span>
+                        <span><a href="/">新サービス開始のお知らせ</a></span>
+                    </li>
+                    <li><span>[xxxx/xx/xx]</span>
+                        <span><a href="/">サーバーメンテナンスのご連絡</a></span>
+                    </li>
+                </ul>
+                <div>
+                    <a href="/" aria-label="お知らせ一覧ページへ">お知らせ一覧へ</a>
+                </div>
+            </section>
+            <section class="common-container">
+                <h3 class="common-heading">プロジェクトの管理</h3>
+                <hr>
+                <p>
+                    <a href="/" class="link-reset">
+                        <span>開発ポータルサイト</span>
+                        <span class="color-gray"> - 進捗率(20%) -</span>
+                        <div class="bar">
+                            <div class="bar-fill js-bar-fill" data-progress="20"></div>
+                        </div>
+                    </a>
+                </p>
+                <hr>
+                <p>
+                    <a href="/" class="link-reset">
+                        <span>Docker開発環境の整理</span>
+                        <span class="color-gray"> - 進捗率(75%) -</span>
+                        <div class="bar">
+                            <div class="bar-fill js-bar-fill" data-progress="75"></div>
+                        </div>
+                    </a>
+                </p>
+                <hr>
+                <div>
+                    <a href="/" >プロジェクト一覧へ</a>
+                </div>
+            </section>
+            <section class="common-container">
+                <h3 class="common-heading">開発リソース</h3>
+                <hr>
+                <ul>
+                    <li><a href="/">開発ガイドライン</a></li>
+                    <li><a href="/">ドキュメントテンプレート</a></li>
+                    <li><a href="/">技術スタック一覧</a></li>
+                    <li><a href="/">開発ツール置き場</a></li>
+                </ul>
+            </section>
+            <section class="common-container">
+                <h3 class="common-heading">スキルアップについて</h3>
+                <hr>
+                <ul>
+                    <li><a href="/">勉強会カレンダー</a></li>
+                    <li><a href="/">資格取得</a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <div th:replace="~{/fragments/footer :: pageFooter}"></div>
+        </footer>
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/progressbar.js"></script>
+</body>
+
+</html>

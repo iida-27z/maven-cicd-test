@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/* 1. Base Style */
+
+body {
+    background-color: gainsboro;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+/* 2. Layout */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    color: white;
+    text-indent: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nav-bar {
+    background-color: gray;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.nav-menu {
+    color: navy;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+    flex: 1
+}
+
+/* 3. Components */
+
+.common-container {
+    background-color: white;
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.common-heading {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.error-message {
+    background-color: mistyrose;
+    color: red;
+}
+
+.info-message{
+    background-color: lightblue;
+}
+
+/* 4. Utilities */
+
+.center {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.color-red {
+    color: orange;
+}
+
+.color-gray {
+    color: gray;
+}
+
+.link-reset {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 5. Page-specific styles */
+
+.bar {
+    background-color: silver;
+    height: 1rem;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.bar-fill {
+    background-color: black;
+    height: 1rem;
+}
+
+.js-bar-fill {
+    width: var(--progress-width, 0%);
+}
