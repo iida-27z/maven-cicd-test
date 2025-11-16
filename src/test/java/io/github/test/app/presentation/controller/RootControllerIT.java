@@ -20,7 +20,7 @@ public class RootControllerIT {
         String requestPath = "/";
 
         // act & assert
-        String expected = "pages/indexZ";
+        String expected = "pages/index";
         mockMvc.perform(MockMvcRequestBuilders.get(requestPath)).andExpect(MockMvcResultMatchers.view().name(expected));
     }
 }
