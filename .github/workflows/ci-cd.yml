@@ -23,8 +23,10 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           cache: 'maven'
-      - name: Run Tests
-        run: mvn -B verify
+      - name: Run Unit Tests
+        run: mvn -B test
+      - name: Run Integration Tests
+        run: mvn verify -DskipUnitTests
       - name: Archive Test Reports
         uses: actions/upload-artifact@v4
         with:

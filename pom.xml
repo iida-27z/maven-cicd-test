@@ -89,6 +89,7 @@
 				<version>3.2.5</version>
 				<configuration>
 					<groups>!integration</groups>
+					<skipTests>${skipUnitTests}</skipTests>
 				</configuration>
 			</plugin>
 			<plugin>
