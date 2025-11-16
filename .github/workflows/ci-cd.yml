@@ -1,4 +1,4 @@
-name: CI/CD
+name: CI-CD
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
 
 jobs:
   test-job:
-    name: Test Run
+    name: Run Unit & Integration Tests
     runs-on: ubuntu-latest
     steps:
       - name: Check Out Code
